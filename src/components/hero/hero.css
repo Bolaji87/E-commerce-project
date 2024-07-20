@@ -61,6 +61,7 @@
 }
 .hero-image {
   margin-top: 10px;
+  height: 500px;
 }
 .hero-image img {
   width: 600px;
