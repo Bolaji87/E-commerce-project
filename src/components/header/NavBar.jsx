@@ -1,6 +1,7 @@
 import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -26,13 +27,13 @@ function NavLinks() {
     <div className="nav-links">
       <ul>
         <li>
-          <a href="#">Products</a>
+          <Link to={"/products"}>Products</Link>
         </li>
         <li>
           <a href="#">Shop</a>
         </li>
         <li>
-          <a href="#">about</a>
+          <Link to={"/about"}>about</Link>
         </li>
       </ul>
     </div>
