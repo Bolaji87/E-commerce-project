@@ -1,0 +1,43 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category img {
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 8px rgba(112, 112, 112, 4);
+}
+.category button {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, blue, green);
+}
+.category button a {
+  text-decoration: none;
+  color: #000;
+}
+.category button:hover {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(to right, purple, yellow);
+}

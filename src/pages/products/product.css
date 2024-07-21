@@ -1,0 +1,14 @@
+.products {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.products ul {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 30px;
+}
