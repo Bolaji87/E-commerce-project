@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../components/header/NavBar";
+// import NavBar from "../../components/header/NavBar";
 import Hero from "../../components/hero/Hero.jsx";
 import Category from "../../components/category-card/Category.jsx";
 
@@ -11,7 +11,6 @@ function Home() {
   return (
     <>
       <div className="home-page">
-        <NavBar />
         <Hero />
       </div>
 

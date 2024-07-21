@@ -1,5 +1,5 @@
 import React from "react";
-// import myPic from "./images/horizon.jpg";
+
 import "./hero.css";
 function Hero() {
   return (

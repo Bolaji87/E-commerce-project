@@ -1,23 +1,29 @@
 import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div id="navbar">
-      <Logo />
-      <NavLinks />
-      <Theme />
-    </div>
+    <>
+      <div id="navbar">
+        <Logo />
+        <NavLinks />
+        <Theme />
+      </div>
+    </>
   );
 };
 
 function Logo() {
+  const navigate = useNavigate();
+  const style = { cursor: "pointer" };
   return (
     <div className="logo">
       <GiAmpleDress className="horizon-icon" />
-      <h1>Horizon unisex hub</h1>
+      <h1 onClick={() => navigate("/")} role="button" style={style}>
+        Horizon unisex hub
+      </h1>
     </div>
   );
 }
@@ -30,7 +36,7 @@ function NavLinks() {
           <Link to={"/products"}>Products</Link>
         </li>
         <li>
-          <a href="#">Shop</a>
+          <Link to="/">Shop</Link>
         </li>
         <li>
           <Link to={"/about"}>about</Link>

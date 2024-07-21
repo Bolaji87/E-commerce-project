@@ -26,16 +26,23 @@ function Product() {
   return (
     <div className="products">
       <ul>
-        {products.map(
-          (product) =>
-            product.category !== "jewelery" &&
-            product.category !== "electronics" && (
-              <ProductCard product={product} key={product.id} />
-            )
+        {products.length > 0 ? (
+          products.map(
+            (product) =>
+              product.category !== "jewelery" &&
+              product.category !== "electronics" && (
+                <ProductCard product={product} key={product.id} />
+              )
+          )
+        ) : (
+          <Loadin />
         )}
       </ul>
     </div>
   );
 }
 
+function Loadin() {
+  return <h1 className="load">please wait Loading products ...</h1>;
+}
 export default Product;
