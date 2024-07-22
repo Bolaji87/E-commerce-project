@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./hero.css";
+
 function Hero() {
   return (
     <div className="hero">
@@ -19,7 +21,7 @@ function HeroDisplayText() {
       </p>
       <h1>horizon unisex hub</h1>
       <button>
-        <a href="#">shop now</a>
+        <Link to="/products">shop now</Link>
       </button>
     </div>
   );

@@ -49,7 +49,7 @@
   color: #411616;
 }
 .theme {
-  width: 200px;
+  width: 170px;
 }
 .theme ul {
   display: flex;
@@ -65,4 +65,19 @@
   text-decoration: none;
   display: inline-block;
   color: #411616;
+}
+.theme li .to-cart:first-child {
+  color: rgb(97, 6, 51);
+  display: inline-block;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+.cart-state {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  font-size: 14px;
+  color: #fff;
 }

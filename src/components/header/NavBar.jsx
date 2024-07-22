@@ -1,15 +1,16 @@
 import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
+import { IoCartOutline } from "react-icons/io5";
 import "./navbar.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ cartItems }) => {
   return (
     <>
       <div id="navbar">
         <Logo />
         <NavLinks />
-        <Theme />
+        <Theme cartItems={cartItems} />
       </div>
     </>
   );
@@ -46,10 +47,18 @@ function NavLinks() {
   );
 }
 
-function Theme() {
+function Theme({ cartItems }) {
   return (
     <div className="theme">
       <ul>
+        <li>
+          <Link className="to-cart" to="/to-cart">
+            <span className="cart-state" style={{ fontSize: "12px" }}>
+              {cartItems}
+            </span>
+            <IoCartOutline />
+          </Link>
+        </li>
         <li>
           <a href="#">login</a>
         </li>

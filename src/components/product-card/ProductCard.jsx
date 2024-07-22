@@ -1,7 +1,7 @@
 import React from "react";
 import "./product-card.css";
 
-function ProductCard({ product }) {
+function ProductCard({ product, onCartItems }) {
   return (
     <>
       <div className="product-card">
@@ -14,7 +14,7 @@ function ProductCard({ product }) {
           />
           <span id="product-price"> $ {product.price}</span>
           <p className="product-title">{product.title}</p>
-          <span className="add-to-cart">
+          <span className="add-to-cart" role="button" onClick={onCartItems}>
             <a href="">Add to cart</a>
           </span>
         </li>
