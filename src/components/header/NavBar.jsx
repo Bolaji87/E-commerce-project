@@ -1,6 +1,7 @@
 import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import { IoCartOutline } from "react-icons/io5";
+import { FiShoppingCart } from "react-icons/fi";
 import "./navbar.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
@@ -54,9 +55,9 @@ function Theme({ cartItems }) {
         <li>
           <Link className="to-cart" to="/to-cart">
             <span className="cart-state" style={{ fontSize: "12px" }}>
-              {cartItems}
+              {cartItems.length > 0 ? cartItems.length : ""}
             </span>
-            <IoCartOutline />
+            <FiShoppingCart />
           </Link>
         </li>
         <li>

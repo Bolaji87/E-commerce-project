@@ -14,7 +14,11 @@ function ProductCard({ product, onCartItems }) {
           />
           <span id="product-price"> $ {product.price}</span>
           <p className="product-title">{product.title}</p>
-          <span className="add-to-cart" role="button" onClick={onCartItems}>
+          <span
+            className="add-to-cart"
+            role="button"
+            onClick={() => onCartItems(product)}
+          >
             <a href="">Add to cart</a>
           </span>
         </li>

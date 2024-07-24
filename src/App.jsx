@@ -8,7 +8,7 @@ const URL = "https://fakestoreapi.com/products";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -27,8 +27,8 @@ function App() {
     fetchProducts();
   }, []);
 
-  function handleCartItems() {
-    setCartItems(products);
+  function handleCartItems(product) {
+    setCartItems((curProducts) => [...curProducts, product]);
   }
   return (
     <>

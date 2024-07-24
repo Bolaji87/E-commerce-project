@@ -2,7 +2,7 @@ import React from "react";
 // import NavBar from "../../components/header/NavBar";
 import Hero from "../../components/hero/Hero.jsx";
 import Category from "../../components/category-card/Category.jsx";
-
+import Footer from "../../components/footer/Footer.jsx";
 import men from "../../assets/category-image/men-cloth-1.jpg";
 import women from "../../assets/category-image/women-cloth-1.jpg";
 
@@ -12,15 +12,16 @@ function Home() {
     <>
       <div className="home-page">
         <Hero />
-      </div>
 
-      <div className="home-cat">
-        <hr />
-        <h1 id="cat-h1">Categories</h1>
-        <div className="cat-cont">
-          <Category image={women} title={"Women's clothes"} />
-          <Category image={men} title={"Men's clothes"} />
+        <div className="home-cat">
+          <hr />
+          <h1 id="cat-h1">Categories</h1>
+          <div className="cat-cont">
+            <Category image={women} title={"Women's clothes"} />
+            <Category image={men} title={"Men's clothes"} />
+          </div>
         </div>
+        <Footer />
       </div>
     </>
   );
