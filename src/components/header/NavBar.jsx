@@ -55,7 +55,7 @@ function Theme({ cartItems }) {
         <li>
           <Link className="to-cart" to="/to-cart">
             <span className="cart-state" style={{ fontSize: "12px" }}>
-              {cartItems.length > 0 ? cartItems.length : ""}
+              {cartItems ? cartItems.length : ""}
             </span>
             <FiShoppingCart />
           </Link>
