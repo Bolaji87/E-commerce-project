@@ -1,6 +1,6 @@
 #navbar {
   background-color: #4d4c4c;
-  background: linear-gradient(to right, rgb(78, 77, 77), rgb(187, 176, 176));
+  background: linear-gradient(to right, rgb(48, 41, 41), rgb(187, 176, 176));
   /* background: linear-gradient(to right, rgb(226, 220, 220), rgb(255, 211, 211)); */
   display: flex;
   justify-content: space-between;
@@ -41,13 +41,19 @@
   list-style-type: none;
   font-size: 14px;
   text-transform: uppercase;
+  padding: 10px;
+  color: #fff;
 }
-.nav-links li a {
-  text-decoration: none;
-  display: inline-block;
-  /* color: #e0c9c9; */
-  color: #411616;
+.nav-links li:hover {
+  background-color: rgb(97, 6, 51);
+  padding: 10px;
+  border-radius: 8px;
+  color: #ffffff;
 }
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
 .theme {
   width: 170px;
 }
@@ -61,17 +67,23 @@
   font-size: 14px;
   text-transform: uppercase;
 }
-.theme li a {
+/* .theme li a {
   text-decoration: none;
   display: inline-block;
   color: #411616;
-}
+}  */
 .theme li .to-cart:first-child {
   color: rgb(97, 6, 51);
   display: inline-block;
   padding: 10px;
   font-size: 30px;
   position: relative;
+}
+.theme li:nth-child(2) {
+  background-color: rgb(97, 6, 51);
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
 }
 
 .cart-state {
