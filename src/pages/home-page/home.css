@@ -1,7 +1,9 @@
 .home-page {
-  background-color: rgb(252, 245, 245);
-  background-color: rgb(88, 84, 84);
-  background: linear-gradient(to bottom, rgb(85, 83, 83), rgb(201, 194, 194));
+  /* background-color: rgb(88, 84, 84); */
+  /* background: linear-gradient(to bottom, rgb(85, 83, 83), rgb(201, 194, 194)); */
+  /* background-color: rgb(252, 245, 245); */
+  /* background-color: #ffe8cc; */
+  background-color: #e9932b;
   /* height: 100vh; */
   /* width: 100vw; */
   /* overflow-x: hidden; */

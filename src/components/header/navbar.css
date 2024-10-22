@@ -94,3 +94,20 @@
   font-size: 14px;
   color: #fff;
 }
+
+.fake-dark-mode {
+  filter: invert(100%);
+  transition: all 0.5s;
+}
+
+.btn-fake-dark-mode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  line-height: 1;
+  font-size: 16px;
+  background-color: #ffe8cc;
+  background-color: #e9932b;
+  border: none;
+}

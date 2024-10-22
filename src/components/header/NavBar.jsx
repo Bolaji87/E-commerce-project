@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import { IoCartOutline } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import "./navbar.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import Button from "../Button";
 
 const NavBar = ({ cartItems }) => {
+  // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
+  const [isFakeDark, setIsFakeDark] = useState(false);
+
+  useEffect(
+    function () {
+      document.documentElement.classList.toggle("fake-dark-mode");
+    },
+    [isFakeDark]
+  );
   return (
     <>
       <div id="navbar">
         <Logo />
         <NavLinks />
-        <Theme cartItems={cartItems} />
+        <Theme
+          cartItems={cartItems}
+          isFakeDark={isFakeDark}
+          setIsFakeDark={setIsFakeDark}
+        />
       </div>
     </>
   );
@@ -48,7 +62,7 @@ function NavLinks() {
   );
 }
 
-function Theme({ cartItems }) {
+function Theme({ cartItems, setIsFakeDark, isFakeDark }) {
   return (
     <div className="theme">
       <ul>
@@ -63,8 +77,15 @@ function Theme({ cartItems }) {
         <li>
           <a href="#">login</a>
         </li>
+
         <li>
-          <a href="#">X</a>
+          <button
+            className="btn-fake-dark-mode"
+            onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
+          >
+            {isFakeDark ? "☀️" : "🌙"}
+          </button>
+          {/* <a href="#">X</a> */}
         </li>
       </ul>
     </div>
