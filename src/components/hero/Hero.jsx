@@ -19,6 +19,7 @@ function HeroDisplayText() {
         Welcome to Horizon Unisex Hub, welcome to <br />
         our wall of modest fashion where style meets sophistication.
       </p>
+
       <h1>horizon unisex hub</h1>
       <button>
         <Link to="/products">shop now</Link>
@@ -29,7 +30,7 @@ function HeroDisplayText() {
 function HeroDisplayImage() {
   return (
     <div className="hero-image">
-      <img src="./images/horizon.jpg" alt="brand-picture" />
+      <img src="./images/fash-display-img2.jpg" alt="brand-picture" />
     </div>
   );
 }

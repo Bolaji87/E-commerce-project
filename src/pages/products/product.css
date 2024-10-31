@@ -1,3 +1,11 @@
+.products-cont {
+  margin-top: 50px;
+}
+
+.product-card-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
 .products {
   /* width: 100vw; */
   /* overflow-x: hidden; */
@@ -25,4 +33,10 @@
   margin-top: 120px;
   font-style: italic;
   text-transform: capitalize;
+}
+
+.select-category {
+  height: 50px;
+  width: 100vw;
+  padding: 8px;
 }
