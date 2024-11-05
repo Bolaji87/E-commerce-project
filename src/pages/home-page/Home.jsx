@@ -17,8 +17,8 @@ function Home() {
           <hr />
           <h1 id="cat-h1">Categories</h1>
           <div className="cat-cont">
-            <Category image={women} title={"Women's clothes"} />
-            <Category image={men} title={"Men's clothes"} />
+            <Category image={women} title={"Women's clothing"} />
+            <Category image={men} title={"Men's clothing"} />
           </div>
         </div>
         <Footer />
