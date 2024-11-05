@@ -40,3 +40,6 @@ ol {
   padding: 0;
   list-style: none; /* Remove default list style */
 }
+hr {
+  margin-top: 160px;
+}
