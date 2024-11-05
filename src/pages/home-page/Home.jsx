@@ -7,7 +7,10 @@ import men from "../../assets/category-image/men-cloth-1.jpg";
 import women from "../../assets/category-image/women-cloth-1.jpg";
 
 import "./home.css";
+import { useProducts } from "../../Hooks/contexts/ProductsContext.jsx";
 function Home() {
+  const { categoryRef } = useProducts();
+
   return (
     <>
       <div className="home-page">
@@ -16,7 +19,7 @@ function Home() {
         <div className="home-cat">
           <hr />
           <h1 id="cat-h1">Categories</h1>
-          <div className="cat-cont">
+          <div className="cat-cont" ref={categoryRef}>
             <Category image={women} title={"Women's clothing"} />
             <Category image={men} title={"Men's clothing"} />
           </div>

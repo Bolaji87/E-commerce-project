@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import NavBar from "./components/header/NavBar";
 import { appRoute } from "./route";
@@ -29,6 +29,7 @@ function App() {
   function handleCartItems(product) {
     setCartItems((curProducts) => [...curProducts, product]);
   }
+
   return (
     <>
       <ProductsProvider>

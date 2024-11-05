@@ -5,6 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import "./navbar.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import Button from "../Button";
+import { useProducts } from "../../Hooks/contexts/ProductsContext";
 
 const NavBar = ({ cartItems }) => {
   // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
@@ -45,6 +46,15 @@ function Logo() {
 }
 
 function NavLinks() {
+  const { categoryRef } = useProducts();
+  const navigate = useNavigate();
+
+  function handleNavigateScroll() {
+    navigate("/");
+    setTimeout(function () {
+      categoryRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+  }
   return (
     <div className="nav-links">
       <ul>
@@ -52,7 +62,7 @@ function NavLinks() {
           <Link to={"/products"}>Products</Link>
         </li>
         <li>
-          <Link to="/">Shop</Link>
+          <span onClick={() => handleNavigateScroll()}>Shop</span>
         </li>
         <li>
           <Link to={"/about"}>about</Link>
