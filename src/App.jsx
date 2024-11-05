@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import Home from "./pages/home-page/Home";
+import { useState } from "react";
+
 import NavBar from "./components/header/NavBar";
 import { appRoute } from "./route";
 import { Route, Routes } from "react-router-dom";
+import { ProductsProvider } from "./Hooks/contexts/ProductsContext";
 
 function App() {
   // const [products, setProducts] = useState([]);
@@ -30,17 +31,19 @@ function App() {
   }
   return (
     <>
-      <NavBar cartItems={cartItems} />
-      <Routes>
-        {appRoute.map((route) => (
-          <Route
-            key={route.path}
-            path={route.path}
-            exact
-            element={<route.component onCartItems={handleCartItems} />}
-          />
-        ))}
-      </Routes>
+      <ProductsProvider>
+        <NavBar cartItems={cartItems} />
+        <Routes>
+          {appRoute.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              exact
+              element={<route.component onCartItems={handleCartItems} />}
+            />
+          ))}
+        </Routes>
+      </ProductsProvider>
     </>
   );
 }
