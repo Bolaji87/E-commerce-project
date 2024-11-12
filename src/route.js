@@ -1,7 +1,7 @@
 import Product from "./pages/products/Product.jsx";
 import AboutUs from "./pages/about/AboutUs.jsx";
 import Home from "./pages/home-page/Home.jsx";
-
+import AddToCart from "./pages/cart/AddToCart.jsx";
 export const appRoute = [
   {
     path: "/",
@@ -14,6 +14,10 @@ export const appRoute = [
   {
     path: "about",
     component: AboutUs,
+  },
+  {
+    path: "cart",
+    component: AddToCart,
   },
 ];
 
