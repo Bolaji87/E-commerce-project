@@ -62,7 +62,12 @@ function NavLinks() {
           <Link to={"/products"}>Products</Link>
         </li>
         <li>
-          <span onClick={() => handleNavigateScroll()}>Shop</span>
+          <span
+            style={{ cursor: "pointer" }}
+            onClick={() => handleNavigateScroll()}
+          >
+            Shop
+          </span>
         </li>
         <li>
           <Link to={"/about"}>about</Link>
@@ -85,7 +90,7 @@ function Theme({ cartItems, setIsFakeDark, isFakeDark }) {
           </Link>
         </li>
         <li>
-          <a href="#">login</a>
+          <Link to={"/login"}>login</Link>
         </li>
 
         <li>
