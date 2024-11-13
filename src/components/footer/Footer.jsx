@@ -3,8 +3,8 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div>
-      <p>Horizon unisex hub</p>
+    <div className="footer">
+      <p>Horizon unisex hub &copy; 2024</p>
     </div>
   );
 }
