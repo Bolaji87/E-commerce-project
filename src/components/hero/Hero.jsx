@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./hero.css";
+import styles from "./Hero.module.css";
 
 function Hero() {
   return (
-    <div className="hero">
+    <div className={styles.hero}>
       <HeroDisplayText />
       <HeroDisplayImage />
     </div>
@@ -14,7 +14,7 @@ function Hero() {
 
 function HeroDisplayText() {
   return (
-    <div className="hero-display-text">
+    <div className={styles["hero-display-text"]}>
       <p>
         Welcome to Horizon Unisex Hub, welcome to <br />
         our wall of modest fashion where style meets sophistication.
@@ -29,7 +29,7 @@ function HeroDisplayText() {
 }
 function HeroDisplayImage() {
   return (
-    <div className="hero-image">
+    <div className={styles["hero-image"]}>
       <img src="./images/fash-display-img2.jpg" alt="brand-picture" />
     </div>
   );

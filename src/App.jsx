@@ -9,7 +9,7 @@ function App() {
   const { isLogged } = useUser();
 
   return (
-    <>
+    <div className="app">
       <Suspense fallback={<h1>Loading...</h1>}>
         <NavBar />
         <Routes>
@@ -37,7 +37,7 @@ function App() {
           })}
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 }
 
