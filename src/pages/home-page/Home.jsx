@@ -21,7 +21,7 @@ function Home() {
           <h1 id="cat-h1">Categories</h1>
           <div className="cat-cont" ref={categoryRef}>
             <Category image={women} title={"Women's clothing"} />
-            <Category image={men} title={"Men's clothing"} />
+            <Category image={men} title={"Men's clothing"}  />
           </div>
         </div>
         <Footer />
